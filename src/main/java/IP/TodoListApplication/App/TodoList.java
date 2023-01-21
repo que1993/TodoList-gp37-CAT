@@ -3,6 +3,7 @@ package IP.TodoListApplication.App;
 import IP.TodoListApplication.Features.*;
 import IP.TodoListApplication.DataSorting.*;
 import IP.TodoListApplication.SaveRead.*;
+import IP.TodoListApplication.UI.ActionsUI;
 
 import java.util.*;
 
@@ -165,6 +166,9 @@ public class TodoList {
      * Will be used to print all valid actions
      */
     public void showAvailableActions() {
+
+        new ActionsUI();
+
         System.out.println("");
         System.out.println("1. Add a task");
         System.out.println("2. Mark task as done");
