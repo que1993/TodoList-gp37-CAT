@@ -1,6 +1,10 @@
 package IP.TodoListApplication.UI;
 
+import IP.TodoListApplication.Features.AddTask;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ActionsUI extends JFrame{
 
@@ -17,47 +21,71 @@ public class ActionsUI extends JFrame{
         private JButton READFILEbutton;
         private JButton EXITbutton;
 
-    public ActionsUI() {
-        JFrame f = new JFrame("Actions");
-        JLabel l = new JLabel("TO-DO List1");
-        JButton b1 = new JButton("ADD TASK");
-        JButton b2 = new JButton("MARK TASK AS DONE");
-        JButton b3 = new JButton("REMOVE TASK");
-        JButton b4 = new JButton("EDIT TASK");
-        JButton b5 = new JButton("DISPLAY ALL TASK");
-        JButton b6 = new JButton("SORT TASKS BY DATE");
-        JButton b7 = new JButton("SORT TASKS BY PROJECT");
-        JButton b8 = new JButton("SAVE TASKS IN FILE");
-        JButton b9 = new JButton("READ FROM FILE");
-        JButton b10 = new JButton("EXIT");
+    public ActionsUI(JFrame parent) {
+        JFrame f1 = new JFrame("Actions");
+        JLabel TitleLabel = new JLabel("TO-DO List1");
 
-        b1.setBounds(100,100,100,40);
-        b2.setBounds(100,100,100,40);
-        b3.setBounds(100,100,100,40);
-        b4.setBounds(100,100,100,40);
-        b5.setBounds(100,100,100,40);
-        b6.setBounds(100,100,100,40);
-        b7.setBounds(100,100,100,40);
-        b9.setBounds(100,100,100,40);
-        b8.setBounds(100,100,100,40);
-        b10.setBounds(100,100,100,40);
+        JButton ADDTASKbutton = new JButton("ADD TASK");
+        JButton MARKTASKbutton = new JButton("MARK TASK AS DONE");
+        JButton REMOVETASKbutton = new JButton("REMOVE TASK");
+        JButton EDITASKbutton = new JButton("EDIT TASK");
+        JButton DISPLAYALLbutton = new JButton("DISPLAY ALL TASK");
+        JButton SORTDATEbutton = new JButton("SORT TASKS BY DATE");
+        JButton SORTPROJECTbutton = new JButton("SORT TASKS BY PROJECT");
+        JButton SAVETASKSButton = new JButton("SAVE TASKS IN FILE");
+        JButton READFILEbutton = new JButton("READ FROM FILE");
+        JButton EXITbutton = new JButton("EXIT");
 
-        f.add(b1);
-        f.add(b2);
-        f.add(b3);
-        f.add(b4);
-        f.add(b5);
-        f.add(b6);
-        f.add(b7);
-        f.add(b8);
-        f.add(b9);
-        f.add(b10);
+        ADDTASKbutton.setBounds(100,100,500,40);
+        MARKTASKbutton.setBounds(100,200,500,40);
+        REMOVETASKbutton.setBounds(100,300,500,40);
+        EDITASKbutton.setBounds(100,400,500,40);
+        DISPLAYALLbutton.setBounds(100,500,500,40);
+        SORTDATEbutton.setBounds(100,600,500,40);
+        SORTPROJECTbutton.setBounds(100,700,500,40);
+        SAVETASKSButton.setBounds(100,800,500,40);
+        READFILEbutton.setBounds(100,900,500,40);
+        EXITbutton.setBounds(100,1000,500,40);
 
-        f.setSize(480,480);
-        f.setLayout(null);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f1.add(TitleLabel);
 
-    }
-}
+        f1.add(ADDTASKbutton);
+        f1.add(MARKTASKbutton);
+        f1.add(REMOVETASKbutton);
+        f1.add(EDITASKbutton);
+        f1.add(DISPLAYALLbutton);
+        f1.add(SORTDATEbutton);
+        f1.add(SORTPROJECTbutton);
+        f1.add(SAVETASKSButton);
+        f1.add(READFILEbutton);
+        f1.add(EXITbutton);
+
+        f1.setSize(720,720);
+        f1.setLayout(null);
+        f1.setVisible(true);
+        f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        ADDTASKbutton.addActionListener(new ActionListener() {  //open outer add task action listener
+            @Override
+            public void actionPerformed(ActionEvent e) {//open inner add task action listener
+                AddTaskUI addtaskui = new AddTaskUI(null);
+                addtaskui.show(); //open frame add task
+                dispose(); //close actions frame
+
+
+            }   //close inner add task action listener
+        }); //close outer add task action listener
+
+    }   //close method ActionsUI()
+
+//    public static void main(String[] args) {    //open main
+//
+//        ActionsUI actionui = new ActionsUI(null);
+//    }//close main
+
+}   //close class ActionUI
+
+
+
+
 
