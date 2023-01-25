@@ -3,9 +3,6 @@ package IP.TodoListApplication.App;
 import IP.TodoListApplication.Features.*;
 import IP.TodoListApplication.DataSorting.*;
 import IP.TodoListApplication.SaveRead.*;
-//import IP.TodoListApplication.UI.ActionsUI;
-import IP.TodoListApplication.UI.ActionsUI;
-import IP.TodoListApplication.UI.AddTaskUI;
 
 import java.util.*;
 
@@ -170,22 +167,22 @@ public class TodoList {
     public void showAvailableActions() {
 
 //        new ActionsUI();
-        ActionsUI actionui = new ActionsUI(null);
+        //ActionsUI actionui = new ActionsUI(null);
         //ActionsUI actionsui = new ActionsUI(null);
         //AddTaskUI addtaskui = new AddTaskUI(null);
 
-        System.out.println("");
-        System.out.println("1. Add a task");
-        System.out.println("2. Mark task as done");
-        System.out.println("3. Remove task ");
-        System.out.println("4. Edit task");
-        System.out.println("5. Display all tasks");
-        System.out.println("6. Sort tasks by date");
-        System.out.println("7. sort tasks by project");
-        System.out.println("8. save tasks to file");
-        System.out.println("9. read from file");
-        System.out.println("10. Exit");
-        System.out.println("");
+//        System.out.println("");
+//        System.out.println("1. Add a task");
+//        System.out.println("2. Mark task as done");
+//        System.out.println("3. Remove task ");
+//        System.out.println("4. Edit task");
+//        System.out.println("5. Display all tasks");
+//        System.out.println("6. Sort tasks by date");
+//        System.out.println("7. sort tasks by project");
+//        System.out.println("8. save tasks to file");
+//        System.out.println("9. read from file");
+//        System.out.println("10. Exit");
+//        System.out.println("");
     }
 
     /**

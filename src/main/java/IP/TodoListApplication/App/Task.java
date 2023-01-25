@@ -16,7 +16,8 @@ import java.time.LocalDate;
  */
 
 
-public class Task {
+public class
+Task {
 
     private String id;
     private String title;
@@ -31,7 +32,6 @@ public class Task {
     public String getId() {
         return id;
     }
-
     /**
      * @return IP.TodoListApplication.App.Task's title
      */
@@ -65,9 +65,8 @@ public class Task {
     /**
      * @param id IP.TodoListApplication.App.Task's ID to set
      */
-    public void setId(String id) {
-        this.id = id;
-    }
+    public void setId(String id) {this.id = id;}
+//      public void setId(String id) {IDtf.getText().equals = id;}
 
     /**
      * @param title IP.TodoListApplication.App.Task's title to set
@@ -111,6 +110,12 @@ public class Task {
      */
     public static Task buildTask(String id, String title, LocalDate dueDate, String status, String projectName) {
         Task task = new Task();
+
+        task.setId(id);
+        task.setTitle(title);
+        task.setDueDate(dueDate);
+        task.setStatus(status);
+        task.setProjectName(projectName);
 
         task.setId(id);
         task.setTitle(title);
