@@ -23,9 +23,10 @@ public class Footer extends JPanel{
 
         addTask = new JButton("Add Task");
         addTask.setBorder(emptyBorder);
-        addTask.setFont(new Font("Sans-serif",Font.PLAIN, 20));
+        addTask.setFont(new Font("Rockwell",Font.BOLD, 20));
         addTask.setVerticalAlignment(JButton.BOTTOM);
-        //addTask.setBackground(Color.white);
+        addTask.setSize(100,50);
+//        addTask.setBackground(Color.pink);
         this.add(addTask);
 
 

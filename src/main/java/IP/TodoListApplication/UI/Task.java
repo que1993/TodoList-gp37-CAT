@@ -14,6 +14,8 @@ public class Task extends JPanel{
 
     JLabel index;
     JTextField taskName;
+
+    JTextField dueDate;
     JButton done;
 
     private boolean checked;
@@ -35,15 +37,17 @@ public class Task extends JPanel{
         taskName = new JTextField("TEST");
         taskName.setBorder(BorderFactory.createEmptyBorder());
         taskName.setBackground(Color.pink);
-
-
         this.add(taskName,BorderLayout.CENTER);
+
+        dueDate = new JTextField("DUE DATE");
+        dueDate.setBorder(BorderFactory.createEmptyBorder());
+        dueDate.setBackground(Color.red);
+        this.add(dueDate,BorderLayout.AFTER_LAST_LINE);
 
         done = new JButton("Done");
         done.setPreferredSize(new Dimension(40,20));
         done.setBorder(BorderFactory.createEmptyBorder());
         done.setFocusPainted(false);
-
         this.add(done,BorderLayout.EAST);
 
     }
