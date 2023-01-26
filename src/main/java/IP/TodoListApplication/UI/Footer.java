@@ -15,7 +15,8 @@ public class Footer extends JPanel{
     JButton clear;
 
 
-    Border emptyBorder = BorderFactory.createEmptyBorder();
+    Border emptyBorder = BorderFactory.createEmptyBorder(10,10,10,10);
+    Color cool = new Color(225, 70, 138);
 
     Footer()
     {
@@ -23,18 +24,20 @@ public class Footer extends JPanel{
 
         addTask = new JButton("Add Task");
         addTask.setBorder(emptyBorder);
-        addTask.setFont(new Font("Rockwell",Font.BOLD, 20));
+        addTask.setFont(new Font("Rockwell",Font.BOLD, 18));
         addTask.setVerticalAlignment(JButton.BOTTOM);
-        addTask.setSize(100,50);
-//        addTask.setBackground(Color.pink);
+//        addTask.setSize(100,50);
+        addTask.setBackground(cool);
+        addTask.setFocusable(false);
         this.add(addTask);
 
 
         this.add(Box.createHorizontalStrut(20));//Space between buttons
         clear = new JButton("Clear finished tasks");
-        clear.setFont(new Font("Sans-serif",Font.PLAIN, 20));
+        clear.setFont(new Font("Rockwell",Font.BOLD, 18));
         clear.setBorder(emptyBorder);
-        //clear.setBackground();
+        clear.setBackground(cool);
+        clear.setFocusable(false);
         this.add(clear);
 
 
