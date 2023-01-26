@@ -14,7 +14,6 @@ public class Footer extends JPanel{
     JButton addTask;
     JButton clear;
 
-
     Border emptyBorder = BorderFactory.createEmptyBorder(10,10,10,10);
     Color cool = new Color(225, 70, 138);
 

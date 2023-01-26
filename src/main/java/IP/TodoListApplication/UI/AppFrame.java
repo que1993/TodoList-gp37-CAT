@@ -1,11 +1,10 @@
 package IP.TodoListApplication.UI;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class AppFrame extends JFrame{
 
@@ -22,6 +21,7 @@ public class AppFrame extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
 
+
         title = new TitleBar();
         footer = new Footer();
         list = new List();
@@ -34,6 +34,7 @@ public class AppFrame extends JFrame{
         clear = footer.getClear();
 
         addListeners();
+
     }
 
 
@@ -76,4 +77,6 @@ public class AppFrame extends JFrame{
             }
         });
     }
+
+
 }

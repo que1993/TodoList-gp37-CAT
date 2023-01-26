@@ -10,10 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
-import javax.swing.BorderFactory;
 
 public class Task extends JPanel{
-
     Color date = new Color(97, 155, 138);
     Color donee = new Color(187,152,152);
     Border bevelBorder = BorderFactory.createRaisedBevelBorder();
@@ -27,6 +25,7 @@ public class Task extends JPanel{
 
     Task()
     {
+
         this.setPreferredSize(new Dimension(400,20));
         this.setBackground(Color.pink);
 
@@ -38,11 +37,6 @@ public class Task extends JPanel{
         index.setPreferredSize(new Dimension(20,20));
         index.setHorizontalAlignment(JLabel.CENTER);
         this.add(index,BorderLayout.WEST);
-
-//        taskName = new JTextField("TEST");
-//        taskName.setBorder(BorderFactory.createEmptyBorder());
-//        taskName.setBackground(Color.pink);
-//        this.add(taskName,BorderLayout.CENTER);
 
         taskName = new JTextField();
         taskName.setBounds(100,20,165,25);
@@ -70,16 +64,11 @@ public class Task extends JPanel{
         Font font =  new Font ("Baloo Bhai 2", Font.PLAIN, 20);
 
         dueDate = new JTextField("");
-//        dueDate.setBorder(BorderFactory.createEmptyBorder());
-//        dueDate.setBackground(date);
-//        dueDate.setFont(font);
-//        this.add(dueDate,BorderLayout.AFTER_LAST_LINE);
-
-//        taskName = new JTextField();
         dueDate.setBounds(100,20,165,25);
         dueDate.setText("Due Date");
         dueDate.setBorder(BorderFactory.createEmptyBorder());
         dueDate.setBackground(date);
+        dueDate.setForeground(Color.white);
         dueDate.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent event) {
@@ -126,8 +115,8 @@ public class Task extends JPanel{
 
     public void changeState()
     {
-        this.setBackground(Color.gray);
-        taskName.setBackground(Color.gray);
+        this.setBackground(Color.lightGray);
+        taskName.setBackground(Color.lightGray);
         checked = true;
         revalidate();
     }

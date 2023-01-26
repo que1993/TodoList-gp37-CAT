@@ -1,6 +1,7 @@
 package IP.TodoListApplication;
 
 import IP.TodoListApplication.App.*;
+import IP.TodoListApplication.UI.AppFrame;
 
 public class Main {
 
@@ -26,6 +27,4 @@ public class Main {
 
         toDoList.start();
     }
-
-
 }
